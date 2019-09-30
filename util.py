@@ -50,7 +50,7 @@ class GNNGraph(object):
         self.node_tags = node_tags
         self.label = label
         self.node_features = node_features  # numpy array (node_num * feature_dim)
-        self.degs = list(dict(g.degree).values())
+        self.degs = list(dict(g.degree()).values())
 
         if len(g.edges()) != 0:
             x, y = zip(*g.edges())
